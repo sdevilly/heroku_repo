@@ -62,10 +62,10 @@ public class Main {
     RelativisticModel.select();
     String energy = System.getenv().get("ENERGY");
     if (energy == null) {
-      energy = "World";
+      energy = "12 GeV";
     }
     Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
-    model.put("science", "Hello" + m.toString());
+    model.put("science", "E=mc^2: 12 GeV = " + m.toString());
     return "hello";
   }
 
